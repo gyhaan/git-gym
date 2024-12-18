@@ -295,6 +295,7 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 PS C:\Users\Hp\Desktop\Practice\git-gym> git push --set-upstream origin ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 Everything up-to-date
+
 ````
 
 ## Bundle 3
@@ -477,4 +478,92 @@ remote:      https://github.com/gyhaan/git-gym/pull/new/ft/home-page-redesign
 remote:
 To https://github.com/gyhaan/git-gym.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git branch ft/home-page-redesign ft/faq-page
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git commit -m 'after rebase'
+[ft/home-page-redesign d2b5065] after rebase
+ 1 file changed, 1 insertion(+)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.25 KiB | 213.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git remote add git-copy https://github.com/gyhaan/git-gym-2.git
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git remote -v
+git-copy        https://github.com/gyhaan/git-gym-2.git (fetch)
+git-copy        https://github.com/gyhaan/git-gym-2.git (push)
+origin  https://github.com/gyhaan/git-gym.git (fetch)
+origin  https://github.com/gyhaan/git-gym.git (push)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git commit -m 'Other Repo'
+[main c4f4e52] Other Repo
+ 1 file changed, 1 insertion(+)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gyhaan/git-gym.git
+   60c9a46..c4f4e52  main -> main
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git push git-copy main
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (35/35), 6.90 KiB | 1009.00 KiB/s, done.
+Total 35 (delta 17), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/gyhaan/git-gym-2.git
+ * [new branch]      main -> main
 ```
