@@ -438,3 +438,43 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/gyhaan/git-gym.git
    46d53bc..413078d  ft/team-page -> ft/team-page
 ```
+
+### Exercise 2
+
+```bash
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git branch ft/home-page-redesign ft/faq-page
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git commit -m 'after rebase'
+[ft/home-page-redesign d2b5065] after rebase
+ 1 file changed, 1 insertion(+)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.25 KiB | 213.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
