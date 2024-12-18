@@ -105,3 +105,41 @@ HEAD is now at 1081cc2 about and  home
 PS C:\Users\Hp\Desktop\Practice\git-gym> git reset --hard
 HEAD is now at 1081cc2 about and  home
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash
+PS C:\Users\Hp\Desktop\Practice\git-gym> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\Hp\Desktop\Practice\git-gym> git add .
+PS C:\Users\Hp\Desktop\Practice\git-gym> git commit -m 'bundle-2 init commit'
+[ft/bundle-2 a26d31a] bundle-2 init commit
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+PS C:\Users\Hp\Desktop\Practice\git-gym> git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Practice\git-gym> git push -u origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 437 bytes | 218.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/bundle-2
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+```
