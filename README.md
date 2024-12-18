@@ -567,3 +567,5 @@ remote: Resolving deltas: 100% (17/17), done.
 To https://github.com/gyhaan/git-gym-2.git
  * [new branch]      main -> main
 ```
+
+### Exercise 2
