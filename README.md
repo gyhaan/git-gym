@@ -665,3 +665,24 @@ remote:
 To https://github.com/gyhaan/git-gym.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+
+## Bundle 5
+
+### Exercise 2
+
+```bash
+PS C:\Users\Hp\Desktop\git-cafe-exercise> git add .
+PS C:\Users\Hp\Desktop\git-cafe-exercise> git commit -m 'change header'
+[main 7733e4b] change header
+ 1 file changed, 399 insertions(+), 239 deletions(-)
+PS C:\Users\Hp\Desktop\git-cafe-exercise> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.55 KiB | 794.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gyhaan/git-cafe-exercise.git
+   d1d3f9c..7733e4b  main -> main
+```
