@@ -686,3 +686,126 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/gyhaan/git-cafe-exercise.git
    d1d3f9c..7733e4b  main -> main
 ```
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git checkout -b ft/new-feat
+Switched to a new branch 'ft/new-feat'
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (ft/new-feat)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (ft/new-feat)
+$ git commit -m 'menu'
+[ft/new-feat dba05b8] menu
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (ft/new-feat)
+$ git push
+fatal: The current branch ft/new-feat has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/new-feat
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (ft/new-feat)
+$ git push origin ft/new-feat
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 424 bytes | 141.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/new-feat' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-cafe-exercise/pull/new/ft/new-feat
+remote:
+To https://github.com/gyhaan/git-cafe-exercise.git
+ * [new branch]      ft/new-feat -> ft/new-feat
+```
+
+### Exercise 2
+
+```bash
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (bug-fix)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (bug-fix)
+$ git commit -m 'change title'
+[bug-fix 1aa721b] change title
+ 1 file changed, 232 insertions(+), 164 deletions(-)
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (bug-fix)
+$ git push
+fatal: The current branch bug-fix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug-fix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (bug-fix)
+$ git push origin bug-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.40 KiB | 1.40 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-cafe-exercise/pull/new/bug-fix
+remote:
+To https://github.com/gyhaan/git-cafe-exercise.git
+ * [new branch]      bug-fix -> bug-fix
+```
+
+### Exercise 3
+
+```bash
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git checkout -b hot-fix
+Switched to a new branch 'hot-fix'
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (hot-fix)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (hot-fix)
+$ git commit -m 'hot fix'
+[hot-fix c06f57f] hot fix
+ 1 file changed, 231 insertions(+), 163 deletions(-)
+
+Hp@OWGA MINGW64 ~/Desktop/git-cafe-exercise (hot-fix)
+$ git push origin hot-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.39 KiB | 1.39 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hot-fix' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-cafe-exercise/pull/new/hot-fix
+remote:
+To https://github.com/gyhaan/git-cafe-exercise.git
+ * [new branch]      hot-fix -> hot-fix
+```
