@@ -296,3 +296,145 @@ PS C:\Users\Hp\Desktop\Practice\git-gym> git push --set-upstream origin ft/servi
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 Everything up-to-date
 ````
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git log
+commit 46d53bc53176298d2c469074187ec75fb4af41e7 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: gyhaan <g.yhaan@alustudent.com>
+Date:   Wed Dec 18 10:51:09 2024 +0200
+
+    team page
+
+commit a96a8ee357dec520f849f8ce34187079e47415e1 (origin/main, main, ft/contact-page)
+Author: gyhaan <g.yhaan@alustudent.com>
+Date:   Wed Dec 18 10:36:24 2024 +0200
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git switch ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git cherry-pick 46d53bc53176298d2c469074187ec75fb4af41e7
+[ft/contact-page a9e312a] team page
+ Date: Wed Dec 18 10:51:09 2024 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git commit -m 'contact page'
+[ft/contact-page 033dac1] contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 667 bytes | 166.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/contact-page
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git branch ft/contact-page ft/faq-page
+fatal: a branch named 'ft/contact-page' already exists
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git branch ft/faq-page ft/contact-page
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/contact-page)
+$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/faq-page)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/faq-page)
+$ git commit -m 'faq page'
+[ft/faq-page 77a8c39] faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 421 bytes | 140.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/faq-page
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/faq-page)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git revert 46d53bc53176298d2c469074187ec75fb4af41e7
+[ft/team-page 413078d] Revert "team page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git commit -m 'team page revert'
+On branch ft/team-page
+Your branch is ahead of 'origin/ft/team-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/team-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 244 bytes | 244.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gyhaan/git-gym.git
+   46d53bc..413078d  ft/team-page -> ft/team-page
+```
