@@ -567,3 +567,101 @@ remote: Resolving deltas: 100% (17/17), done.
 To https://github.com/gyhaan/git-gym-2.git
  * [new branch]      main -> main
 ```
+
+### Exercise 2
+
+```bash
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git commit -m 'footer'
+[ft/footer b7e52ac] footer
+ 2 files changed, 3 insertions(+)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 473 bytes | 473.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/footer
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/footer -> ft/footer
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git add .
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git commit -m 'footer second commit'
+[ft/footer 65901b8] footer second commit
+ 1 file changed, 1 insertion(+)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gyhaan/git-gym.git
+   b7e52ac..65901b8  ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/footer)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/squashing)
+$ git merge --squash ft/footer
+Updating f20720e..65901b8
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md | 2 ++
+ home.html | 2 ++
+ 2 files changed, 4 insertions(+)
+
+Hp@OWGA MINGW64 ~/Desktop/Practice/git-gym (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 504 bytes | 504.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gyhaan/git-gym/pull/new/ft/squashing
+remote:
+To https://github.com/gyhaan/git-gym.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
