@@ -34,7 +34,7 @@ stash@{0}: On main: team
 stash@{1}: On main: about
 stash@{2}: On main: home
 PS C:\Users\Hp\Desktop\Practice\git-gym> git stash pop stash@{1}
-error: unknown switch `e'
+error: unknown switch `e
 usage: git stash pop [--index] [-q | --quiet] [<stash>]
 
     -q, --[no-]quiet      be quiet, only report errors
@@ -63,7 +63,7 @@ Changes to be committed:
 
 Dropped stash@{1} (280b015742d9d2f363e0178ad6f3a127f18aacac)
 PS C:\Users\Hp\Desktop\Practice\git-gym> git stash pop stash@{0}
-error: unknown switch `e'
+error: unknown switch `e
 usage: git stash pop [--index] [-q | --quiet] [<stash>]
 
     -q, --[no-]quiet      be quiet, only report errors
